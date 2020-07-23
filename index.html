@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/styles.css">
+  <title> Sorting Visualizer </title>
+</head>
+
+<body>
+  <div class="navbar navbar-expand navbar-dark bg-dark">
+      <select name="algorithm" class="w-25 nav-item mr-5 ml-3 custom-select customselect-sm">
+        <option value="" selected disabled hidden> Algorithm</option>
+        <option value="Insertion Sort"> Insertion Sort</option>
+        <option value="Merge Sort">Merge Sort</option>
+        <option value="Quick Sort">Quick Sort</option>
+        <option value="Radix Sort">Radix Sort</option>
+      </select>
+      <div class="nav-item mr-5">
+        <label class="navbar-text"for="quantity">Quantity</label>
+        <input onchange="setFirstTime()"class="mr-5 mb-2 form-control-range" type="range" name="quantity" value="quantity" min="20" max="200">
+      </div>
+      <button class="navbar-item btn btn-outline-light mr-5" type="button" onclick="Run()" name="button">Run</button>
+      <span class="navbar-text time"></span>
+  </div>
+  <canvas class="border rounded border-dark"id="canvas" width="1000" height="500"></canvas>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/MergeSort.js"></script>
+  <script type="text/javascript" src="js/InsertionSort.js"></script>
+  <script type="text/javascript" src="js/QuickSort.js"></script>
+  <script type="text/javascript" src="js/RadixSort.js"></script>
+</body>
+
+</html>
